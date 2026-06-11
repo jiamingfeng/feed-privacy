@@ -3,120 +3,117 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Feed — Privacy Policy</title>
+  <title>Feed — Newborn breastfeeding tracker</title>
+  <meta name="description" content="Feed is a simple, private Android app for tracking newborn breastfeeding, pumping, and diapers. Local-only, no account, no ads." />
   <style>
-    :root { color-scheme: light dark; }
+    :root { color-scheme: light dark; --accent: #e8927c; --accent-ink: #b5503a; }
+    * { box-sizing: border-box; }
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      line-height: 1.6;
-      max-width: 720px;
-      margin: 0 auto;
-      padding: 2rem 1.25rem 4rem;
-      color: #1a1a1a;
-      background: #ffffff;
+      line-height: 1.6; margin: 0; color: #1f2328; background: #fffdfb;
     }
     @media (prefers-color-scheme: dark) {
-      body { color: #e6e6e6; background: #161616; }
-      a { color: #8ab4f8; }
-      code { background: #2a2a2a; }
+      body { color: #e6e6e6; background: #141312; }
+      a { color: #f0a892; }
+      .card { background: #1f1d1b !important; border-color: #2c2926 !important; }
+      header.hero { background: linear-gradient(160deg, #241b18, #141312) !important; }
+      nav.top { background: rgba(20,19,18,.85) !important; border-color: #2c2926 !important; }
     }
-    h1 { font-size: 1.8rem; margin-bottom: 0.25rem; }
-    h2 { font-size: 1.2rem; margin-top: 2rem; }
-    .updated { color: #777; font-size: 0.9rem; margin-top: 0; }
-    code { background: #f0f0f0; padding: 0.1rem 0.3rem; border-radius: 4px; font-size: 0.9em; }
-    ul { padding-left: 1.25rem; }
-    footer { margin-top: 3rem; font-size: 0.85rem; color: #777; }
+    a { color: var(--accent-ink); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    nav.top {
+      position: sticky; top: 0; z-index: 10;
+      display: flex; gap: 1.25rem; align-items: center;
+      padding: .75rem 1.25rem; border-bottom: 1px solid #efe7e2;
+      background: rgba(255,253,251,.85); backdrop-filter: blur(8px);
+      font-size: .95rem;
+    }
+    nav.top .brand { font-weight: 700; margin-right: auto; }
+    .wrap { max-width: 760px; margin: 0 auto; padding: 0 1.25rem; }
+    header.hero {
+      text-align: center; padding: 3.5rem 1.25rem 3rem;
+      background: linear-gradient(160deg, #fdeee8, #fffdfb);
+    }
+    header.hero h1 { font-size: 2.4rem; margin: 0 0 .5rem; }
+    header.hero p.tag { font-size: 1.15rem; color: #6b6560; margin: 0 auto; max-width: 30rem; }
+    @media (prefers-color-scheme: dark) { header.hero p.tag { color: #a8a29c; } }
+    .pills { margin: 1.5rem 0 0; display: flex; gap: .5rem; flex-wrap: wrap; justify-content: center; }
+    .pill { font-size: .8rem; padding: .25rem .7rem; border-radius: 999px; background: var(--accent); color: #fff; }
+    section { padding: 2.5rem 0; }
+    h2 { font-size: 1.5rem; margin-top: 0; }
+    .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
+    .card { border: 1px solid #efe7e2; border-radius: 14px; padding: 1.1rem 1.2rem; background: #fff; }
+    .card h3 { margin: 0 0 .35rem; font-size: 1.05rem; }
+    .card p { margin: 0; color: #6b6560; font-size: .95rem; }
+    @media (prefers-color-scheme: dark) { .card p { color: #a8a29c; } }
+    .cta { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1.5rem; }
+    .btn { display: inline-block; padding: .7rem 1.2rem; border-radius: 10px; font-weight: 600; }
+    .btn.primary { background: var(--accent); color: #fff; }
+    .btn.ghost { border: 1px solid var(--accent); color: var(--accent-ink); }
+    footer { border-top: 1px solid #efe7e2; padding: 2rem 1.25rem 3rem; text-align: center; color: #8a847e; font-size: .9rem; }
+    @media (prefers-color-scheme: dark) { footer, nav.top { border-color: #2c2926; } footer { color: #8a847e; } }
+    blockquote { border-left: 3px solid var(--accent); margin: 1.25rem 0; padding: .25rem 0 .25rem 1rem; color: #6b6560; font-style: italic; }
   </style>
 </head>
 <body>
-  <h1>Feed — Privacy Policy</h1>
-  <p class="updated">Last updated: 11 June 2026</p>
+  <nav class="top">
+    <span class="brand">🍼 Feed</span>
+    <a href="index.html">Home</a>
+    <a href="guide.html">User Guide</a>
+    <a href="story.html">Story</a>
+    <a href="privacy.html">Privacy</a>
+  </nav>
 
-  <p>
-    Feed is a newborn feeding tracker that helps you log breastfeeding,
-    pumping, and diaper changes. This policy explains what data the app
-    handles and how it is stored. In short: <strong>your data stays on your
-    device.</strong>
-  </p>
+  <header class="hero">
+    <h1>Feed</h1>
+    <p class="tag">A simple, private Android app for tracking newborn breastfeeding, pumping, and diapers — built by a new dad, for exhausted parents.</p>
+    <div class="pills">
+      <span class="pill">Local-only</span>
+      <span class="pill">No account</span>
+      <span class="pill">No ads</span>
+      <span class="pill">Free &amp; open</span>
+    </div>
+  </header>
 
-  <h2>Data we collect</h2>
-  <p>
-    <strong>We do not collect any of your data.</strong> Feed has no accounts,
-    no servers, and no analytics or tracking. The developer never receives,
-    stores, or has access to any information you enter into the app.
-  </p>
+  <div class="wrap">
+    <section>
+      <h2>What it does</h2>
+      <p>Log every feeding session in one place — diaper, breast time on each side, formula top-up, pumped volume, and a note — then look back at the data to spot patterns: feeding frequency, intake, output, and weight-gain rhythm. Everything stays on your phone.</p>
 
-  <h2>Data the app stores on your device</h2>
-  <p>
-    Everything you log is saved locally on your device in a private database.
-    This may include:
-  </p>
-  <ul>
-    <li>Feeding, pumping, and diaper-change records (times, durations, amounts, notes)</li>
-    <li>Optional details you choose to enter, such as expressed-milk amounts</li>
-    <li>Your in-app settings, reminders, and preferences</li>
-  </ul>
-  <p>
-    This data is stored only on your device. It is not transmitted to the
-    developer or to any third party.
-  </p>
+      <div class="features">
+        <div class="card">
+          <h3>One-tap logging</h3>
+          <p>A 4-step session wizard — diaper, feed, pump, review — where every step is skippable.</p>
+        </div>
+        <div class="card">
+          <h3>Reminders that wake you</h3>
+          <p>Schedules a real alarm through your phone's Clock app, ringing through Do Not Disturb.</p>
+        </div>
+        <div class="card">
+          <h3>See the trend</h3>
+          <p>A 24-hour timeline strip, daily totals, and a pumping chart with a rolling average.</p>
+        </div>
+        <div class="card">
+          <h3>Your data stays yours</h3>
+          <p>Local SQLite storage. Export and import as JSON anytime. No cloud, no tracking.</p>
+        </div>
+      </div>
 
-  <h2>Sharing your data</h2>
-  <p>
-    Feed only shares data when <em>you</em> choose to. Two features can move
-    data off the device, and both are initiated by you:
-  </p>
-  <ul>
-    <li>
-      <strong>Export &amp; backup.</strong> You can export your records as a
-      CSV or JSON file and share or save it wherever you like. Where that file
-      goes is entirely under your control.
-    </li>
-    <li>
-      <strong>Shift handoff.</strong> You can pass your session data to another
-      device — for example, a partner's phone — using an on-screen QR code or a
-      direct device-to-device connection (Bluetooth / Wi-Fi). This is a direct,
-      peer-to-peer transfer between your devices. It does not use the internet,
-      and the data is not sent to the developer or any server.
-    </li>
-  </ul>
+      <div class="cta">
+        <a class="btn primary" href="guide.html">Read the User Guide</a>
+        <a class="btn ghost" href="story.html">Why I built Feed</a>
+      </div>
+    </section>
 
-  <h2>Permissions</h2>
-  <p>The app may request the following device permissions, only for the features that need them:</p>
-  <ul>
-    <li><strong>Camera</strong> — to scan a handoff QR code.</li>
-    <li><strong>Bluetooth / nearby devices / Wi-Fi</strong> — for the peer-to-peer shift handoff transfer.</li>
-    <li><strong>Notifications</strong> — to deliver feeding reminders you schedule.</li>
-  </ul>
-  <p>These permissions are used solely for the stated features and not for data collection.</p>
-
-  <h2>Children's privacy</h2>
-  <p>
-    Feed is intended for use by parents and caregivers. It does not knowingly
-    collect personal information from anyone, including children.
-  </p>
-
-  <h2>Deleting your data</h2>
-  <p>
-    Because all data is stored locally, you remain in full control. You can
-    delete individual records inside the app, clear the app's data from your
-    device's system settings, or uninstall the app to remove all stored data.
-  </p>
-
-  <h2>Changes to this policy</h2>
-  <p>
-    If this policy changes, the updated version will be posted at this URL with
-    a revised "Last updated" date.
-  </p>
-
-  <h2>Contact</h2>
-  <p>
-    If you have questions about this policy, contact:
-    <a href="mailto:eric84720@gmail.com">eric84720@gmail.com</a>
-  </p>
+    <section>
+      <blockquote>"A small amount of control in a situation that mostly removes it. Logging a feed is a thing you can <em>do</em>, even when most of the work is the baby's and your partner's."</blockquote>
+    </section>
+  </div>
 
   <footer>
-    Feed &middot; Newborn breastfeeding tracker
+    Feed &middot; Newborn breastfeeding tracker &middot;
+    <a href="privacy.html">Privacy Policy</a> &middot;
+    <a href="mailto:eric84720@gmail.com">eric84720@gmail.com</a>
   </footer>
 </body>
 </html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Feed — User Guide</title>
+  <meta name="description" content="How to use Feed: logging sessions, reminders, history, stats, settings, and backup." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="top">
+    <span class="brand">🍼 Feed</span>
+    <a href="index.html">Home</a>
+    <a href="guide.html">User Guide</a>
+    <a href="story.html">Story</a>
+    <a href="privacy.html">Privacy</a>
+  </nav>
+
+  <main>
+    <h1>Feed — User Guide</h1>
+    <p class="lede">Feed is a small Android app for new parents tracking newborn breastfeeding, pumping, and diapers. It's built around a simple idea: log every session in one place, then look back at the data to spot patterns — feeding frequency, intake, output, weight-gain rhythm.</p>
+    <p>Everything stays on your phone. No account, no cloud, no ads.</p>
+
+    <h2>The home screen</h2>
+    <img class="shot" src="screenshots/home.png" alt="Home screen" />
+    <p>When you open Feed you see three things stacked top-to-bottom:</p>
+    <ul>
+      <li><strong>Today</strong> — a quick tally for the current calendar day: feeds, total feed minutes, formula ml, pumped ml, and diaper count. Resets at local midnight.</li>
+      <li><strong>Next feeding</strong> — when the next reminder is queued (e.g. "Reminder at 2:30 PM · alarm queued"). Tap it to jump straight to settings.</li>
+      <li><strong>Last session</strong> — a recap card showing the most recent session, plus any notes.</li>
+    </ul>
+    <p>A big <strong>Start session</strong> button at the bottom kicks off a new entry. The top-right toolbar has shortcuts to <strong>Stats</strong>, <strong>History</strong>, and <strong>Settings</strong>.</p>
+
+    <h2>Logging a session</h2>
+    <p>The session flow is a 4-step wizard: <strong>diaper → feed → pump → review</strong>. Every step is skippable, so you only fill in what's relevant.</p>
+
+    <h3>Step 1 — Diaper</h3>
+    <img class="shot" src="screenshots/session-1-diaper.png" alt="Diaper step" />
+    <p>Tap a chip to record the diaper status (wet / dirty / both / none). Skip if you didn't change one this round.</p>
+
+    <h3>Step 2 — Feed</h3>
+    <img class="shot" src="screenshots/session-2-feed.png" alt="Feed step with stopwatch" />
+    <p>Two options:</p>
+    <ul>
+      <li><strong>Live stopwatch</strong> — tap <strong>Left</strong> or <strong>Right</strong> to start timing that side; tap <strong>Switch sides</strong> to swap. The timer rounds up to whole minutes when you stop, so a 90-second feed counts as 2 minutes (nothing gets undercounted).</li>
+      <li><strong>Manual entry</strong> — type the minutes per side directly. Use this when you forgot to start the timer or are backfilling a feed that already ended.</li>
+    </ul>
+    <p>You can also enter <strong>formula top-up</strong> in ml here — useful if you supplement after the breast.</p>
+
+    <h3>Step 3 — Pump</h3>
+    <img class="shot" src="screenshots/session-3-pump.png" alt="Pump step" />
+    <p>Enter the <strong>pumped ml</strong> for this session. Skip if you didn't pump.</p>
+
+    <h3>Step 4 — Review</h3>
+    <img class="shot" src="screenshots/session-4-review.png" alt="Review step" />
+    <p>Confirm what you entered, add <strong>notes</strong> (free text — anything from "fussy latch" to "spit up after"), and choose whether this specific session should arm a reminder for the next feed. The per-session toggle wins over the global default for this entry only.</p>
+    <p>Hit <strong>Save</strong> and you're done. The home card immediately shows when the next reminder will fire.</p>
+
+    <h2>Reminders</h2>
+    <img class="shot" src="screenshots/reminder-alarm.png" alt="Reminder firing as a system alarm" />
+    <p>The point of a reminder is "wake me when it's time for the next feed." Feed gives you two modes:</p>
+    <ul>
+      <li><strong>Alarm clock</strong> (default) — schedules a real alarm through your phone's Clock app, so it rings even if Feed isn't running and even if your phone is on Do Not Disturb. This is the mode that actually wakes you at 3 AM.</li>
+      <li><strong>No reminder</strong> — turn the global toggle off if you'd rather track manually.</li>
+    </ul>
+    <p>In <strong>Settings</strong> you can change:</p>
+    <ul>
+      <li><strong>Interval</strong> — how long after each feed the reminder should fire (default 3h; chips for 2h / 2.5h / 3h / 3.5h / 4h, or a custom value).</li>
+      <li><strong>Anchor</strong> — whether the timer starts from when the feed <em>began</em> or <em>ended</em>.</li>
+      <li><strong>Snooze</strong> — how long the snooze button on the alarm adds.</li>
+      <li><strong>Mode</strong> — alarm clock vs. no reminder.</li>
+    </ul>
+    <p>Reminders auto-arm after every saved session unless you flipped the per-session switch off or disabled the global toggle.</p>
+
+    <h2>History</h2>
+    <img class="shot" src="screenshots/history-1.png" alt="History list with swipe-to-delete" />
+    <p>The History screen is a reactive list of every session ever logged, newest first. Each row shows time, side(s), minutes, formula, pumped, diaper.</p>
+    <ul>
+      <li><strong>Swipe left</strong> on a row to delete it. A SnackBar appears with <strong>Undo</strong> for a few seconds in case it was a misfire.</li>
+      <li>Tap a row to view its full notes.</li>
+    </ul>
+    <img class="shot" src="screenshots/history-2.png" alt="History with calendar view" />
+    <p>You can also view history by week or month.</p>
+
+    <h2>Stats</h2>
+    <p>Stats has three tabs over a configurable window (3 days / 7 days / 30 days):</p>
+
+    <h3>Timeline</h3>
+    <img class="shot" src="screenshots/stats-timeline.png" alt="Timeline tab" />
+    <p>A 24-hour strip per day. Each session is a colored block — left, right, or both — placed at the time it happened, with formula shown as an overlay. Useful for seeing the actual rhythm: are feeds clustering at night? Are gaps shrinking?</p>
+
+    <h3>Totals</h3>
+    <img class="shot" src="screenshots/stats-totals.png" alt="Totals tab" />
+    <p>Daily multi-metric bar chart: feed count, feed minutes, formula ml, pumped ml, diaper count. Good for week-over-week comparison.</p>
+
+    <h3>Pumping</h3>
+    <img class="shot" src="screenshots/stats-pumping.png" alt="Pumping tab" />
+    <p>Line chart of daily pumped volume with a dashed <strong>3-day rolling average</strong> so day-to-day noise doesn't hide the trend. This is the chart to watch when you're trying to grow supply.</p>
+
+    <h2>Settings</h2>
+    <img class="shot" src="screenshots/settings.png" alt="Settings screen" />
+    <p>One screen, grouped by section:</p>
+    <ul>
+      <li><strong>Reminder</strong> — interval, anchor, snooze, mode, global on/off.</li>
+      <li><strong>Theme</strong> — system / light / dark.</li>
+      <li><strong>Backup</strong> — see below.</li>
+    </ul>
+
+    <h2>Backup</h2>
+    <p>Feed is local-only — your data lives in a SQLite database on your phone. To move between devices or just to be safe:</p>
+    <ul>
+      <li><strong>Export</strong> — produces a single JSON file and opens the system share sheet. Save it to Drive, email it to yourself, AirDrop it, whatever.</li>
+      <li><strong>Import</strong> — pick a previously exported JSON file and choose <strong>Merge</strong> (add to existing data) or <strong>Replace</strong> (wipe and overwrite).</li>
+    </ul>
+    <p>Export regularly — especially before a phone change.</p>
+
+    <h2>Tips from real-world use</h2>
+    <ul>
+      <li><strong>Backfill liberally.</strong> If you forgot to log, open <strong>Start session</strong> anyway and just type the minutes manually. Even rough numbers are useful at the trend level.</li>
+      <li><strong>Use the notes field.</strong> Future-you (and any pediatrician you show this to) cares about patterns like "always fussy on the right" or "spit up when over 30 ml formula."</li>
+      <li><strong>Trust the alarm-clock mode.</strong> It uses your phone's Clock app, so it rings through DND. If you want to be sure, set a 1-minute test reminder once and you'll never doubt it.</li>
+      <li><strong>Check the timeline tab weekly.</strong> The day-by-day strip makes it obvious whether nights are stretching out or staying compressed.</li>
+    </ul>
+
+    <h2>Troubleshooting</h2>
+    <ul>
+      <li><strong>Reminder didn't fire.</strong> Open settings — does it say "alarm queued"? If not, the global toggle may be off, or the per-session switch was flipped off on the last save. Android can also revoke the exact-alarm permission on some OEM ROMs; re-grant it in system settings.</li>
+      <li><strong>Stats look empty.</strong> The window defaults to 7 days. If you've only been using the app for a day, switch to 3-day view.</li>
+      <li><strong>Lost data after reinstall.</strong> v1 has no cloud sync — always export before uninstalling.</li>
+    </ul>
+  </main>
+
+  <footer>
+    Feed &middot; <a href="story.html">Why I built Feed</a> &middot;
+    <a href="privacy.html">Privacy Policy</a> &middot;
+    <a href="mailto:eric84720@gmail.com">eric84720@gmail.com</a>
+  </footer>
+</body>
+</html>
